@@ -1,0 +1,37 @@
+{
+  "name": "pay",
+  "version": "1.0.0",
+  "description": "A Discord User-Install Bot for managing your crypto payments.",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && node ./dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DollarNoob/Pay.git"
+  },
+  "author": "DollarNoob",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DollarNoob/Pay/issues"
+  },
+  "homepage": "https://github.com/DollarNoob/Pay#readme",
+  "dependencies": {
+    "@solana/web3.js": "^1.95.3",
+    "bech32": "^2.0.0",
+    "cheerio": "^1.0.0",
+    "discord-interactions": "^4.1.0",
+    "dotenv": "^16.4.5",
+    "drizzle-kit": "^0.24.2",
+    "drizzle-orm": "^0.33.0",
+    "express": "^4.21.0",
+    "mysql2": "^3.11.3",
+    "typescript": "^5.6.2",
+    "web3": "^4.13.0",
+    "web3-validator": "^2.0.6"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0"
+  }
+}
