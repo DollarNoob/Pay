@@ -325,6 +325,12 @@ async function execute(req: Request, res: Response) {
             // TODO: different block explorers for different currencies
             (components[0].components as Array<any>).push({
                 type: 2,
+                style: 1,
+                label: "Copy Transaction ID",
+                custom_id: "copy:" + newOrder.to.tx.id
+            });
+            (components[0].components as Array<any>).push({
+                type: 2,
                 style: 5,
                 label: "View Transaction",
                 url: "https://polygonscan.com/tx/" + newOrder.to.tx.id

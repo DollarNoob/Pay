@@ -1,7 +1,7 @@
-import { mysqlTable, int, bigint, text, varchar, datetime } from "drizzle-orm/mysql-core";
+import { mysqlTable, int, text, varchar, datetime } from "drizzle-orm/mysql-core";
 import { users } from "./users";
 
-export const payments = mysqlTable("payments", {
+export const transactions = mysqlTable("transactions", {
     id: int("id").autoincrement().primaryKey(),
     user_id: int("user_id").references(() => users.id).notNull(),
     txid: text("txid"),
@@ -15,5 +15,5 @@ export const payments = mysqlTable("payments", {
     exchanged_amount: text("exchanged_amount")
 });
 
-export type Payment = typeof payments.$inferSelect;
-export type NewPayment = typeof payments.$inferInsert;
+export type Transaction = typeof transactions.$inferSelect;
+export type NewTransaction = typeof transactions.$inferInsert;
